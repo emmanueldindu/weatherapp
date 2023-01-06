@@ -10,8 +10,21 @@ function App() {
     <div className="app">
       <main>
         <div className="search-box">
-          <input type="text" name=""
-            placeholder='search' className="search-bar" />
+
+          <input type="text"
+            name=""
+            placeholder='search'
+            className="search-bar" />
+        </div>
+        <div className="">
+          <div className="location-box">
+            <div className="location">
+              New York City, US
+            </div>
+            <div className="date">
+              
+            </div>
+          </div>
         </div>
         
       </main>
