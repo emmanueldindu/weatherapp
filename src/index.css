@@ -4,12 +4,13 @@
   box-sizing: border-box;
   width: 360px;
   margin: auto;
-  
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
   
 }
 
 body {
-  font-family:sans-serif ;
+  font-family: 'Quicksand', sans-serif;
   background-color: rgb(2, 4, 15);
 }
 
@@ -28,6 +29,7 @@ body {
 main {
   min-height: 100vh;
   padding: 25px;
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0,0,0,0.75)); */
 
 }
 
@@ -53,4 +55,56 @@ main {
 
 .search-box .search-bar:focus {
   background-color: rgb(248, 244, 244);
+}
+
+.location-box .location {
+  color: rgb(82, 81, 81);
+  font-size:32px;
+  align-items: center;
+  font-weight: 500;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+}
+
+
+
+.location-box .date {
+  color: rgb(82, 81, 81);
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  /* text-align: center; */
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+
+}
+
+.weather-box{
+  text-align: center;
+}
+.weather-box .temp {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 10px 15px;
+  color: rgb(82, 81, 81);
+  font-size: 102px;
+  text-align: center;
+  width: 200px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+
+  font-weight: 800;
+
+}
+
+
+.weather-box .weather {
+  color: rgb(82, 81, 81);
+  font-size: 33px;
+  font-weight: 600;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+
+
 }

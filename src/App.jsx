@@ -50,7 +50,7 @@ function App() {
             placeholder='search'
             className="search-bar" />
         </div>
-        <div className=""> 
+         
           <div className="location-box">
             <div className="location">
               New York City, US
@@ -59,8 +59,16 @@ function App() {
               {dateBuilder(new Date())}
               
             </div>
+            <div className="weather-box">
+              <div className="temp">
+                15°
+              </div>
+              <div className="weather">
+                Sunny
+              </div>
+            </div>
           </div>
-        </div>
+        
         
       </main>
  
