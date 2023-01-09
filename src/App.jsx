@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState} from 'react'
 const api = {
   key: "e299670088ebc21ae0bc1051d35b11e3",
-  base: "https://api.openweathermap.org/data/2.5"
+  base: "https://api.openweathermap.org/data/2.5/"
 }
 
 function App() {
@@ -15,7 +15,11 @@ function App() {
     if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
-      .then(result => setWeather(result))
+        .then(result => {
+          setWeather(result)
+          setQuery('');
+          console.log(result)
+        })
     }
   }
   
@@ -68,9 +72,15 @@ function App() {
             className="search-bar" />
         </div>
          
-          <div className="location-box">
-            <div className="location">
-              New York City, US
+        {(typeof weather.main != "undefined") ? (
+          <div className="">
+
+            <div className="location-box">
+              
+              <div className="location">
+                
+            {weather.name}
+            {/* {console.log(weather.sys.country)} */}
             </div>
             <div className="date">
               {dateBuilder(new Date())}
@@ -85,6 +95,9 @@ function App() {
               </div>
             </div>
           </div>
+
+          </div>
+          ): ('')}
         
         
       </main>
