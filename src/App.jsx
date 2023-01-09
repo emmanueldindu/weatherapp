@@ -59,13 +59,18 @@ function App() {
 }
 
   return (
-    <div className="app">
+    <div className={(typeof weather.main != 'undefined')
+      ? ((weather.main.temp > 16) 
+        ? 'app warm'
+        : 'app'
+      ) : 'app'
+    }>
       <main>
         <div className="search-box">
 
           <input type="text"
             name=""
-            placeholder='Search...'
+            placeholder='Enter City Name...'
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
@@ -79,8 +84,7 @@ function App() {
               
               <div className="location">
                 
-            {weather.name}
-            {/* {console.log(weather.sys.country)} */}
+            {weather.name},               {(weather.sys.country)} 
             </div>
             <div className="date">
               {dateBuilder(new Date())}
@@ -88,10 +92,10 @@ function App() {
             </div>
             <div className="weather-box">
               <div className="temp">
-                15°
+              {Math.round(weather.main.temp)}°
               </div>
               <div className="weather">
-                Sunny
+            {weather.weather[0].main}
               </div>
             </div>
           </div>
